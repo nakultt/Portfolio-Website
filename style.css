@@ -1,7 +1,7 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #ffffff 0%, #e0f7fa 100%);
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(135deg, #ffffff 0%, #e0fafa 100%);
     color: #1a237e;
     font-family: 'ABC Ginto Nord Unlicensed Trial';
 }
@@ -11,12 +11,21 @@ nav {
     justify-content: flex-end;
     align-items: center;
     padding: 10px 40px;
-    background: linear-gradient(90deg, #0a2540eb 0%, #009688eb 100%); /* added alpha */
+    background: linear-gradient(90deg, #0a2540eb 0%, #009688eb 100%);
     position: fixed;
     width: 100%;
     top: 0;
     box-sizing: border-box;
     z-index: 1000;
+}
+
+#name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 0;      
+    margin-right: 30px; 
+    letter-spacing: 1px;
 }
 
 nav ul {
@@ -54,10 +63,18 @@ nav a:hover {
     font-weight: bolder;
 }
 
-#heading {
-    margin-top: 200px;
+.heading {
     text-align: center;
     color: #a08800;
+    margin-bottom: 20px;
+}
+
+#first-section {
+    margin-top: 150px;
+}
+
+.section {
+    margin: 100px 20%;
 }
 
 .projects {
@@ -68,7 +85,7 @@ nav a:hover {
     margin-top: 40px;
 }
 
-.project-cards {
+.cards {
     background: linear-gradient(135deg, #ffffff 0%, #80ebfc 60%, #9fffe7 100%);
     width: 300px;
     padding: 20px;
@@ -79,10 +96,33 @@ nav a:hover {
     border: 2px solid #1976d2;
 }
 
-.project-cards:hover {
+.cards:hover {
     transform: scale(1.05);
 }
 
-.cards h3 {
-    color: #1976d2;
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.cards-small {
+    background: linear-gradient(135deg, #ffffff 0%, #80ebfc 60%, #9fffe7 100%);
+    width: 130px;
+    padding: 0px;
+    border-radius: 20px;
+    text-align: center;
+    perspective: 1000px;
+    position: relative;
+    border: 2px solid #1976d2;
+}
+
+.cards-small:hover {
+    transform: scale(1.07);
+}
+
+#contact-details {
+    text-align: center;
 }
