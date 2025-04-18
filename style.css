@@ -11,11 +11,12 @@ nav {
     justify-content: flex-end;
     align-items: center;
     padding: 10px 40px;
-    background: linear-gradient(90deg, rgb(10, 37, 64) 0%, #009688 100%);
+    background: linear-gradient(90deg, #0a2540eb 0%, #009688eb 100%); /* added alpha */
     position: fixed;
     width: 100%;
     top: 0;
     box-sizing: border-box;
+    z-index: 1000;
 }
 
 nav ul {
@@ -54,7 +55,7 @@ nav a:hover {
 }
 
 #heading {
-    margin-top: 100px;
+    margin-top: 200px;
     text-align: center;
     color: #a08800;
 }
