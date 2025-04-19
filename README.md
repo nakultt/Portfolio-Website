@@ -21,10 +21,10 @@ This portfolio website serves as a platform to display my work and achievements.
 
 ## Features
 
--Fully responsive design.
--Clean and modern layout.
--Sections for:
-  About Me
-  Projects
-  Skills
-  Contact Information
+- Fully responsive design.
+- Clean and modern layout.
+- Sections for:
+  - About Me
+  - Projects
+  - Skills
+  - Contact Information
