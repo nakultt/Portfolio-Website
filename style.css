@@ -4,6 +4,7 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #e0fafa 100%);
     color: #1a237e;
     font-family: 'ABC Ginto Nord Unlicensed Trial';
+    animation: bodyFadeIn 1.2s ease 0.1s forwards;
 }
 
 nav {
@@ -41,7 +42,14 @@ nav a {
     font-size: 18px;
     position: relative;
     padding: 10px 0px;
+    opacity: 0;
+    animation: fadeInNav 0.8s forwards;
+    transition: color 0.2s;
 }
+nav a:nth-child(1) { animation-delay: 0.2s; }
+nav a:nth-child(2) { animation-delay: 0.4s; }
+nav a:nth-child(3) { animation-delay: 0.6s; }
+nav a:nth-child(4) { animation-delay: 0.8s; }
 
 nav a::before {
     content: "";
@@ -52,6 +60,7 @@ nav a::before {
     height: 3px;
     background: linear-gradient(90deg, #ddbc04 0%, #00bcd4 100%);
     transform: translateX(-50%) scale(0);
+    transition: transform 0.3s ease;
 }
 
 nav a:hover::before {
@@ -60,7 +69,7 @@ nav a:hover::before {
 
 nav a:hover {
     color: #ddbc04;
-    font-weight: bolder;
+    transform: scale(1.08);
 }
 
 .heading {
@@ -75,14 +84,24 @@ nav a:hover {
 
 .section {
     margin: 100px 20%;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInSection 1s ease 0.5s forwards;
 }
 
-.projects {
+.projects, .skills, .contacts {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     margin-top: 40px;
+}
+
+.cards:hover, .cards-small:hover, .cards-medium:hover {
+    transform: scale(1.08) translateY(-5px) !important;
+    box-shadow: 0 20px 40px rgba(26,35,126,0.15), 0 15px 20px rgba(26,35,126,0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #6de6ff 60%, #85ffe7 100%);
+    z-index: 2;
 }
 
 .cards {
@@ -94,19 +113,19 @@ nav a:hover {
     perspective: 1000px;
     position: relative;
     border: 2px solid #1976d2;
+    transform: scale(0.95) translateY(30px);
+    opacity: 0;
+    animation: fadeInCard 0.7s forwards;
 }
-
-.cards:hover {
-    transform: scale(1.05);
-}
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 40px;
-}
+.cards:nth-child(1) { animation-delay: 0.2s; }
+.cards:nth-child(2) { animation-delay: 0.4s; }
+.cards:nth-child(3) { animation-delay: 0.6s; }
+.cards:nth-child(4) { animation-delay: 0.8s; }
+.cards:nth-child(5) { animation-delay: 1s; }
+.cards:nth-child(6) { animation-delay: 1.2s; }
+.cards:nth-child(7) { animation-delay: 1.4s; }
+.cards:nth-child(8) { animation-delay: 1.6s; }
+.cards:nth-child(9) { animation-delay: 1.8s; }
 
 .cards-small {
     background: linear-gradient(135deg, #ffffff 0%, #80ebfc 60%, #9fffe7 100%);
@@ -117,12 +136,71 @@ nav a:hover {
     perspective: 1000px;
     position: relative;
     border: 2px solid #1976d2;
+    transform: scale(0.95) translateY(30px);
+    opacity: 0;
+    animation: fadeInCard 0.7s forwards;
 }
+.cards-small:nth-child(1) { animation-delay: 0.2s; }
+.cards-small:nth-child(2) { animation-delay: 0.4s; }
+.cards-small:nth-child(3) { animation-delay: 0.6s; }
+.cards-small:nth-child(4) { animation-delay: 0.8s; }
+.cards-small:nth-child(5) { animation-delay: 1s; }
+.cards-small:nth-child(6) { animation-delay: 1.2s; }
+.cards-small:nth-child(7) { animation-delay: 1.4s; }
+.cards-small:nth-child(8) { animation-delay: 1.6s; }
+.cards-small:nth-child(9) { animation-delay: 1.8s; }
 
-.cards-small:hover {
-    transform: scale(1.07);
-}
-
-#contact-details {
+.cards-medium {
+    background: linear-gradient(135deg, #ffffff 0%, #80ebfc 60%, #9fffe7 100%);
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
     text-align: center;
+    perspective: 1000px;
+    position: relative;
+    border: 2px solid #1976d2;
+    transform: scale(0.95) translateY(30px);
+    opacity: 0;
+    animation: fadeInCard 0.7s forwards;
+}
+
+.cards-medium:nth-child(1) { animation-delay: 0.2s; }
+.cards-medium:nth-child(2) { animation-delay: 0.6s; }
+.cards-medium:nth-child(3) { animation-delay: 1s; }
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+@keyframes fadeInNav {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes bodyFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
