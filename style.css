@@ -153,7 +153,7 @@ nav a:hover {
 .cards-medium {
     background: linear-gradient(135deg, #ffffff 0%, #80ebfc 60%, #9fffe7 100%);
     width: 400px;
-    padding: 10px;
+    padding: 0px;
     border-radius: 20px;
     text-align: center;
     perspective: 1000px;
