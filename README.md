@@ -10,7 +10,6 @@ This is the repository for my personal portfolio website. It showcases my skills
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Features](#features)
-- [License](#license)
 
 ## Overview
 
@@ -30,3 +29,31 @@ This portfolio website serves as a platform to display my work and achievements.
   - Projects
   - Skills
   - Contact Information
+
+## Architecture
+
+The site is a single static page with no build step, served by GitHub Pages.
+
+```mermaid
+flowchart LR
+    GP[GitHub Pages] --> H[portfolio.html]
+    H --> CSS[style.css<br/>layout · responsive breakpoints]
+    H --> S1[#projects<br/>Top projects]
+    H --> S2[#skills<br/>Skills]
+    H --> S3[#contacts<br/>Contact me]
+```
+
+| File | Purpose |
+|---|---|
+| `portfolio.html` | Page markup and section anchors for in-page navigation |
+| `style.css` | Typography, layout and responsive rules |
+| `favicon.png` | Site icon |
+
+## Getting started
+
+```bash
+git clone https://github.com/nakultt/Portfolio-Website.git
+cd Portfolio-Website
+# open portfolio.html in a browser, or:
+python -m http.server 8000   # http://localhost:8000/portfolio.html
+```
